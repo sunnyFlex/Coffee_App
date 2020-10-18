@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33070707"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee Order"
+            android:textAllCaps="true"
+            android:textSize="30sp"
+            android:textColor="#FFEE57"
+            android:textStyle="bold"
+            android:paddingVertical="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#323232"/>
+
+        <RadioGroup
+            android:id="@+id/coffee_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="10dp">
+
+            <RadioButton
+                android:id="@+id/ameri_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아메리카노"
+                android:textColor="#E1E1E1"
+                android:textStyle="bold"
+                android:tag="아메리카노"
+                android:buttonTint="#E1E1E1"
+                android:textSize="25sp"
+                />
+
+            <RadioButton
+                android:id="@+id/moca_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="모카라떼"
+                android:tag="모카라떼"
+                android:textSize="25sp"
+                android:textColor="#E1E1E1"
+                android:textStyle="bold"
+                android:buttonTint="#E1E1E1"
+                android:layout_marginHorizontal="20dp"
+                />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            >
+
+            <Button
+                android:id="@+id/minus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="-"
+                android:text="-"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/quantity_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp"/>
+
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#323232"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:textSize="25dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                android:layout_marginBottom="10dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/small_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Small"
+                    android:textColor="#E1E1E1"
+                    android:textSize="25sp"
+                    android:tag="(S)"
+                    android:buttonTint="#E1E1E1"
+                    />
+
+                <RadioButton
+                    android:id="@+id/large_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Large( +500 )"
+                    android:textSize="25sp"
+                    android:textColor="#E1E1E1"
+                    android:tag="(L)"
+                    android:buttonTint="#E1E1E1"
+                    android:layout_marginHorizontal="20dp"
+                    />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#323232"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price"
+                android:textSize="25sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="10dp"
+                android:textStyle="italic"
+                android:textAllCaps="true"/>
+
+            <ScrollView
+                android:id="@+id/order_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                >
+
+                <TextView
+                    android:id="@+id/order_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:text="아메리카노 x 1"
+                    android:textColor="#b1b1b1"
+                    android:textSize="20dp"
+                    android:background="#66232323"
+                    android:gravity="right"
+                    />
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#99323232"
+                android:gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Total"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical|right"
+                    />
+
+                <TextView
+                    android:id="@+id/result_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="100,500"
+                    android:textColor="#B4FD74"
+                    android:textSize="30dp"
+                    android:background="#66232323"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="원"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp"
+                    android:background="#66232323"
+                    android:paddingLeft="5dp"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#323232"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/order_btn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Order"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#528CFF"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
